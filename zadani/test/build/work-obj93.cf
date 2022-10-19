@@ -1,0 +1,4 @@
+v 4
+file "/home/ondrej/Projekty/inp22-projekt/zadani/test/" "../src/cpu.vhd" "394c0710964acf9b50d5cfd9f0967d318b405dd0" "20221019202306.554":
+  entity cpu at 6( 225) + 0 on 11;
+  architecture behavioral of cpu at 43( 1944) + 0 on 12;

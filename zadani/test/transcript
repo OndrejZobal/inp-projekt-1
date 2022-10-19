@@ -1,0 +1,89 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2022.3 linux_x86_64 Jul 18 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do ./build/runsim.do
+# QuestaSim-64 vmap 2022.3 Lib Mapping Utility 2022.07 Jul 18 2022
+# vmap -c 
+# Copying /home/ondrej/.local/Programs/QuestaSim/questasim/linux_x86_64/../modelsim.ini to modelsim.ini
+# QuestaSim-64 vmap 2022.3 Lib Mapping Utility 2022.07 Jul 18 2022
+# vmap work build/work 
+# Modifying modelsim.ini
+# QuestaSim-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 20:24:11 on Oct 19,2022
+# vcom -reportprogress 300 -work work "+acc" ../src/cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity cpu
+# -- Compiling architecture behavioral of cpu
+# End time: 20:24:11 on Oct 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish exit -foreign "cocotb_init /home/ondrej/Projekty/inp22-projekt/env/lib/python3.10/site-packages/cocotb/libs/libcocotbfli_modelsim.so" work.cpu 
+# Start time: 20:24:11 on Oct 19,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "cpu(behavioral)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.cpu(behavioral)#1
+# Loading /home/ondrej/Projekty/inp22-projekt/env/lib/python3.10/site-packages/cocotb/libs/libcocotbfli_modelsim.so
+#      -.--ns INFO     gpi                                ..ib/fli/FliImpl.cpp:1131 in cocotb_init                     cocotb_init called
+#      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:109  in set_program_name_in_venv        Using Python virtual environment interpreter at /home/ondrej/Projekty/inp22-projekt/env/bin/python
+#      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       FLI registered
+#      0.00ns INFO     cocotb                             Running on ModelSim for Questa-64 version 2022.3 2022.07
+#      0.00ns INFO     cocotb                             Running tests with cocotb v1.7.1 from /home/ondrej/Projekty/inp22-projekt/env/lib/python3.10/site-packages/cocotb
+#      0.00ns INFO     cocotb                             Seeding Python random module with 1666211054
+#      0.00ns INFO     cocotb.hexdigest                   lib: 6e1a26c0e2594e6da0e8e9a75ee37b65
+#      0.00ns INFO     cocotb.regression                  Found test cpu.test_decrement
+#      0.00ns INFO     cocotb.regression                  running test_decrement (1/1)
+#                                                           Decrement value of the first memory cell, i.e. *ptr--
+#      0.00ns INFO     cocotb.hexdigest                   test: 65aec9a6e1d9a47e27c552f70ace4a41
+#      0.00ns INFO     cocotb.hexdigest                   code: 7a53856a4ab8d18650cd8ffb96c8bdc0
+#      0.00ns ERROR    cocotb.cpu_tb                      RAM module failed with exception Unresolvable bit in binary string: 'U'
+#      0.00ns ERROR    cocotb.cpu_tb                      LCD module failed with exception Unresolvable bit in binary string: 'U'
+#      0.00ns ERROR    cocotb.cpu_tb                      KB module failed with exception Unresolvable bit in binary string: 'U'
+#     56.00ns INFO     cocotb.regression                  test_decrement failed
+#                                                         Traceback (most recent call last):
+#                                                           File "/home/ondrej/Projekty/inp22-projekt/zadani/test/cpu_lib.py", line 205, in fff
+#                                                             return await fg(dut)
+#                                                           File "/home/ondrej/Projekty/inp22-projekt/zadani/test/cpu.py", line 37, in test_decrement
+#                                                             assert mem[RAM_OFS] == 255-2
+#                                                         AssertionError: assert 0 == (255 - 2)
+#     56.00ns INFO     cocotb.regression                  **************************************************************************************
+#                                                         ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+#                                                         **************************************************************************************
+#                                                         ** cpu.test_decrement             FAIL          56.00           0.37        151.28  **
+#                                                         **************************************************************************************
+#                                                         ** TESTS=1 PASS=0 FAIL=1 SKIP=0                 56.00           0.51        110.35  **
+#                                                         **************************************************************************************
+#                                                         
+# Simulation halt requested by foreign interface.
+# Causality operation skipped due to absence of debug database file
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 20:32:08 on Oct 19,2022, Elapsed time: 0:07:57
+# Errors: 0, Warnings: 1
